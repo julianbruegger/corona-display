@@ -26,6 +26,7 @@ date = int(s)
 
 current_ch_list = repr(parsed.get("confirmed").get("locations")[id].get("history")
 
+
 print (current_ch)
 print (s)
 
