@@ -41,16 +41,9 @@ while True:
     deaths_ch = repr(parsed.get("deaths").get("locations")[id].get("latest"))
     recovered_ch = repr(parsed.get("recovered").get("locations")[id].get("latest"))
 
-    #print ("Confirmed Worldwide " + confirmed_w)
-    #time.sleep (1)
-    #print ("Deaths Worldwide " + deaths_w)
-    #time.sleep (1)
-    #print ("Recovered Worldwide " + recovered_w)
-    #print ("Swiss Deaths " + deaths_ch)
 
-
-
-    lcd.set_color(1.0, 1.0, 0.0)
+    
+    lcd.set_color(0.8, 0.5, 0.0)
     lcd.clear()
     lcd.message('Swiss Cases ' + confirmed_ch)
     lcd.message('\nWW Cases ' + confirmed_w)
@@ -69,6 +62,6 @@ while True:
     lcd.message('CH Dead ' + deaths_ch)
     lcd.message('\nWW Dead ' + deaths_w)
 
-    time.sleep(30.0)
+    time.sleep(15.0)
 
 
