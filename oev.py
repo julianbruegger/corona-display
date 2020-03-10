@@ -9,7 +9,7 @@ url = "https://coronavirus-tracker-api.herokuapp.com/all"
 url_ov = "http://transport.opendata.ch/v1/stationboard?station=lucerne&limit=1"
 
 id = 85 # country ID
-
+# Enter own numbers for your coubtry
 population_world = float("8000000000")
 population_country = float("8570000")
 
