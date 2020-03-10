@@ -2,6 +2,11 @@
 
 To keep a eye on the current Corona-Virus numbers I created this Programm wich displays the current stats to the Display.
 
+<img src="./data/IMG.jpg">
+
+
+## Datasource
+
 ## Make it work
 
 To print the numbers to the Terminal simply run the `fetch.py` file.
@@ -11,6 +16,7 @@ To show all Corona-cases to the Display run `display.py`.
 To change the Country, change the `id` value.
 
 To find the Correct id, open the link below, search for your country and then change the id value.
+
 ```python
 url = "https://coronavirus-tracker-api.herokuapp.com/all"
 id = 85 # country ID
