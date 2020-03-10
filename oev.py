@@ -74,15 +74,24 @@ while True:
     wait = 0.9
     message = category + number +' to ' + destination + '\nExp: ' + departure_time 
     lenght = len(message)
+
     lcd.set_color(0.1, 0.1, 0.1)
     lcd.clear()
     lcd.message(message)
 
-    for i in range (10):
+    for i in range (lenght):
         time.sleep(wait)
         lcd.move_left()
 
-    for i in range (10):
+    for i in range (lenght):
+        time.sleep(wait)
+        lcd.move_right()
+
+    for i in range (lenght):
+        time.sleep(wait)
+        lcd.move_left()
+
+    for i in range (lenght):
         time.sleep(wait)
         lcd.move_right()
          
