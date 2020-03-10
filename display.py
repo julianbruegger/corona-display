@@ -6,7 +6,7 @@ import math
 import Adafruit_CharLCD as LCD
 
 url = "https://coronavirus-tracker-api.herokuapp.com/all"
-id = 87 # country ID
+id = 85 # country ID
 
 # Raspberry Pi configuration:
 lcd_rs = 27  # Change this to pin 21 on older revision Raspberry Pi's

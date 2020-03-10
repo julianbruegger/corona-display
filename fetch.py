@@ -3,7 +3,7 @@ import json
 import time
 from datetime import date
 url = "https://coronavirus-tracker-api.herokuapp.com/all"
-id = 87 # country ID
+id = 85 # country ID
 
 response = requests.get(url)
 data = response.text
