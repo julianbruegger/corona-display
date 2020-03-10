@@ -73,6 +73,7 @@ while True:
 
     wait = 0.9
     message = category + number +' to ' + destination + '\nExp: ' + departure_time 
+    lenght = len(message)
     lcd.set_color(0.1, 0.1, 0.1)
     lcd.clear()
     lcd.message(message)
