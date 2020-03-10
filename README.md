@@ -13,6 +13,8 @@ To print the numbers to the Terminal simply run the `fetch.py` file.
 
 To show all Corona-cases to the Display run `display.py`.
 
+Additional i created a Version `oev.py` wich shows the next Train departing from Lucerne, Switzerland.
+
 To change the Country, change the `id` value.
 
 To find the Correct id, open the link below, search for your country and then change the id value.
