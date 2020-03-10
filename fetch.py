@@ -20,6 +20,16 @@ confirmed_c = repr(parsed.get("confirmed").get("locations")[id].get("latest"))
 deaths_c = repr(parsed.get("deaths").get("locations")[id].get("latest"))
 recovered_c = repr(parsed.get("recovered").get("locations")[id].get("latest"))
 
+float_w = float(confirmed_w)
+float_c = float(confirmed_c)
+population_world = float("8000000000")
+population_country = float("8000000")
+percent_w = '{:.7f}'.format(float_w / population_world)
+percent_c = '{:.7f}'.format(float_c / population_country)
+
+print (percent_w)
+print (percent_c)
+
 print ("Confirmed WW " + confirmed_w)
 print ("deaths WW " + deaths_w)
 print ("recovered WW " + recovered_w)

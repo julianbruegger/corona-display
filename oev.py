@@ -10,6 +10,9 @@ url_ov = "http://transport.opendata.ch/v1/stationboard?station=lucerne&limit=1"
 
 id = 85 # country ID
 
+population_world = float("8000000000")
+population_country = float("8570000")
+
 # Raspberry Pi configuration:
 lcd_rs = 27  # Change this to pin 21 on older revision Raspberry Pi's
 lcd_en = 22
@@ -62,7 +65,12 @@ while True:
     confirmed_c = repr(parsed.get("confirmed").get("locations")[id].get("latest"))
     deaths_c = repr(parsed.get("deaths").get("locations")[id].get("latest"))
     recovered_c = repr(parsed.get("recovered").get("locations")[id].get("latest"))
-    
+
+    float_w = float(confirmed_w)
+    float_c = float(confirmed_c)
+    percent_w = '{:.7f}'.format(float_w / population_world)
+    percent_c = '{:.7f}'.format(float_c / population_country)
+
     wait = 0.9
     message = category + number +' to ' + destination + '\nExp: ' + departure_time 
     lcd.set_color(0.1, 0.1, 0.1)
@@ -76,10 +84,8 @@ while True:
     for i in range (10):
         time.sleep(wait)
         lcd.move_right()
-       
-  
+         
     time.sleep(20.0)
-
 
     lcd.set_color(1.0, 0.54, 0.0)
     lcd.clear()
@@ -100,6 +106,13 @@ while True:
     lcd.message(cc_formated +' Dead ' + deaths_c)
     lcd.message('\nWW Dead ' + deaths_w)
 
+    time.sleep(20.0)
+
+    lcd.set_color(0.2, 0.5, 0.4)
+    lcd.clear()
+    lcd.message('% of Swiss Population')
+    lcd.message('\n' + percent_w + '%')
+    
     time.sleep(20.0)
 
     

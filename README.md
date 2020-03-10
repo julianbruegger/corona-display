@@ -25,6 +25,8 @@ id = 85 # country ID
 ```
 ## Wiring
 
+Detailed Instructions here: [Adafruit](https://learn.adafruit.com/character-lcd-with-raspberry-pi-or-beaglebone-black/overview)
+
 <img src="https://cdn-learn.adafruit.com/assets/assets/000/018/260/original/raspberry_pi_RaspberryPiRGB_bb.png?1405984925">
 
 - Connect Pi 5V power to the power rail of the breadboard. From the power rail connect one outer lead of the potentiometer, LCD pin 2 (VDD), and LCD pin 15 (LED+).
@@ -42,5 +44,5 @@ id = 85 # country ID
 
 ## Setup
 
-To setup the Display run `instal.sh`. This Installs all the dependencies.
+To setup the Display run `install.sh`. This Installs all the dependencies.
 
