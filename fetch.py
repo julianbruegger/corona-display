@@ -14,26 +14,16 @@ confirmed_w = repr(parsed.get("latest").get("confirmed"))
 deaths_w = repr(parsed.get("latest").get("deaths"))
 recovered_w = repr (parsed.get("latest").get("recovered"))
 
+country_code = repr(parsed.get("confirmed").get("locations")[id].get("country_code"))
+country_code_filter = country_code[1:3]
+confirmed_c = repr(parsed.get("confirmed").get("locations")[id].get("latest"))
+deaths_c = repr(parsed.get("deaths").get("locations")[id].get("latest"))
+recovered_c = repr(parsed.get("recovered").get("locations")[id].get("latest"))
 
-confirmed_ch = repr(parsed.get("confirmed").get("locations")[id].get("latest"))
-deaths_ch = repr(parsed.get("deaths").get("locations")[id].get("latest"))
-recovered_ch = repr(parsed.get("recovered").get("locations")[id].get("latest"))
+print ("Confirmed WW " + confirmed_w)
+print ("deaths WW " + deaths_w)
+print ("recovered WW " + recovered_w)
 
-today = date.today()
-s = today.strftime('%m/%d/%Y').replace("0", "",2)
-date = int(s)
-
-
-current_ch_list = repr(parsed.get("confirmed").get("locations")[id].get("history")
-
-
-print (current_ch)
-print (s)
-
-
-#print ("Confirmed Worldwide " + confirmed_w)
-#time.sleep (1)
-#print ("Deaths Worldwide " + deaths_w)
-#time.sleep (1)
-#print ("Recovered Worldwide " + recovered_w)
-#print ("Swiss Deaths " + deaths_ch)
+print ("Confirmed " + country_code_filter +" "+ confirmed_w)
+print ("deaths WW " + deaths_w)
+print ("recovered WW " + recovered_w)

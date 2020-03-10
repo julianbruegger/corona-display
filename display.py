@@ -36,32 +36,32 @@ while True:
     deaths_w = repr(parsed.get("latest").get("deaths"))
     recovered_w = repr (parsed.get("latest").get("recovered"))
 
+    country_code = repr(parsed.get("confirmed").get("locations")[id].get("country_code"))
+    cc_formated = country_code[2:4]
+    confirmed_c = repr(parsed.get("confirmed").get("locations")[id].get("latest"))
+    deaths_c = repr(parsed.get("deaths").get("locations")[id].get("latest"))
+    recovered_c = repr(parsed.get("recovered").get("locations")[id].get("latest"))
 
-    confirmed_ch = repr(parsed.get("confirmed").get("locations")[id].get("latest"))
-    deaths_ch = repr(parsed.get("deaths").get("locations")[id].get("latest"))
-    recovered_ch = repr(parsed.get("recovered").get("locations")[id].get("latest"))
 
-
-    
-    lcd.set_color(0.8, 0.5, 0.0)
+    lcd.set_color(1.0, 0.54, 0.0)
     lcd.clear()
-    lcd.message('Swiss Cases ' + confirmed_ch)
+    lcd.message(cc_formated + ' Cases ' + confirmed_c)
     lcd.message('\nWW Cases ' + confirmed_w)
 
-    time.sleep(15.0)
+    time.sleep(20.0)
 
     lcd.set_color(0.0, 1.0, 0.0)
     lcd.clear()
-    lcd.message('CH Recoverd ' + recovered_ch)
+    lcd.message(cc_formated + ' Recoverd ' + recovered_c)
     lcd.message('\nWW ' + recovered_w)
 
-    time.sleep(15.0)
+    time.sleep(20.0)
 
     lcd.set_color(1.0, 0.0, 0.0)
     lcd.clear()
-    lcd.message('CH Dead ' + deaths_ch)
+    lcd.message(cc_formated +' Dead ' + deaths_c)
     lcd.message('\nWW Dead ' + deaths_w)
 
-    time.sleep(15.0)
+    time.sleep(20.0)
 
 
