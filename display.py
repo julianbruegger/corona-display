@@ -13,7 +13,7 @@ population_w = "7770173166"
 url_w ="https://corona.help/"
 
 
-Raspberry Pi configuration:
+#Raspberry Pi configuration:
 lcd_rs = 27  # Change this to pin 21 on older revision Raspberry Pi's
 lcd_en = 22
 lcd_d4 = 25
@@ -52,15 +52,15 @@ while True:
 
     lcd.set_color(1.0, 0.54, 0.0)
     lcd.clear()
-    lcd.message(cc + ' Cases ' + confirmed_c)
-    lcd.message('\nWW Cases ' + confirmed_w)
+    lcd.message(cc + ' Cases ' + infections_c)
+    lcd.message('\nWW Cases ' + infections_w)
 
     time.sleep(20.0)
 
     lcd.set_color(0.0, 1.0, 0.0)
     lcd.clear()
-    lcd.message(cc + ' Recoverd ' + recovered_c)
-    lcd.message('\nWW ' + recovered_w)
+    lcd.message(cc + ' Recoverd ' + survived_c)
+    lcd.message('\nWW ' + survived_w)
 
     time.sleep(20.0)
 

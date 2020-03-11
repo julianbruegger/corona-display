@@ -47,7 +47,25 @@ Detailed Instructions here: [Adafruit](https://learn.adafruit.com/character-lcd-
 
 ## Setup
 
-To setup the Display run `install.sh`. This Installs all the dependencies.
+Fetch current version of GitHub.
+```sh
+cd ~
+git clone https://github.com/julianbruegger/corona-display.git
+
+cd ~/corona-display
+```
+
+To setup the Display run:
+```sh
+sudo chmod +x install.sh
+sudo ./install.sh
+```
+This Installs all the dependencies.
+
+To start the Program just run:
+```sh
+python3 display.py
+```
 
 ## Old Version
 
