@@ -10,7 +10,7 @@ url_ov = "http://transport.opendata.ch/v1/stationboard?station=lucerne&limit=1"
 
 id = 85 # country ID
 
-population_world = float("8000000000")
+population_world = float("7769947783")
 population_country = float("8570000")
 
 # Raspberry Pi configuration:
