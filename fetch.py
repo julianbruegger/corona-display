@@ -27,7 +27,7 @@ survived_w = soup_w.select('h1')[3].text.strip()
 percent_c = str('{:.7f}'.format(int(infections_c) / int(population_c))+(" %"))
 percent_w = str('{:.7f}'.format(int(infections_w) / int(population_w))+(" %"))
 
-
+    
 print("Cases in " +(last))
 print(("Infections: ") + infections_c + (", Deaths: ") + deaths_c+(", Survived: ")+survived_c)
 print("Numbers Worldwide")
