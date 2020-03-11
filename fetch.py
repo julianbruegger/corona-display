@@ -14,21 +14,27 @@ page_w = requests.get(url_w)
 soup_w = BeautifulSoup(page_w.text, 'html.parser')
 
 # print (soup)
+country = soup_c.select('h1')[0].text.strip()
 infections_c = soup_c.select('h1')[1].text.strip()
 deaths_c = soup_c.select('h1')[2].text.strip()
 survived_c = soup_c.select('h1')[3].text.strip()
 
+first, *middle, last = country.split()
+
 infections_w = soup_w.select('h1')[1].text.strip()
 deaths_w = soup_w.select('h1')[2].text.strip()
 survived_w = soup_w.select('h1')[3].text.strip()
-percent_c = '{:.7f}'.format(int(infections_c) / int(population_c))
-percent_w = '{:.7f}'.format(int(infections_w) / int(population_w))
+percent_c = str('{:.7f}'.format(int(infections_c) / int(population_c))+(" %"))
+percent_w = str('{:.7f}'.format(int(infections_w) / int(population_w))+(" %"))
 
 
+print("Cases in " +(last))
+print(("Infections: ") + infections_c + (", Deaths: ") + deaths_c+(", Survived: ")+survived_c)
+print("Numbers Worldwide")
+print(("Infections: ")+infections_w+(", Deaths: ")+ deaths_w +(", Survivied: ") +survived_w)
 
-print(infections_c, deaths_c, survived_c)
-print(infections_w, deaths_w, survived_w)
-
-print (percent_c, percent_w)
+print (percent_c + (" of ")+(last)+ (" citicens are infected!"))
+print (percent_w + (" of world citicens are infected!"))
+print ()
 
 

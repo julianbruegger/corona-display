@@ -7,22 +7,25 @@ To keep a eye on the current Corona-Virus numbers I created this Programm wich d
 
 ## Datasource
 
+For data I use [this Website](https://corona.help/).
+
+To extract the data I use BeautifulSoup.
+
 ## Make it work
 
 To print the numbers to the Terminal simply run the `fetch.py` file.
 
 To show all Corona-cases to the Display run `display.py`.
 
-Additional i created a Version `oev.py` wich shows the next Train departing from Lucerne, Switzerland.
-
-To change the Country, change the `id` value.
-
-To find the Correct id, open the link below, search for your country and then change the id value.
+To change the location, you ned to adjust the `url_c = "YourCountryLink"`. The Link you can find [here](https://corona.help/). To show the correct countrycode adjust the `CC = "Your countrycode"` as you wish.
 
 ```python
-url = "https://coronavirus-tracker-api.herokuapp.com/all"
-id = 85 # country ID
+# Insert your URL here
+url_c = "https://corona.help/country/switzerland"
+# Your Countrycode
+cc = "CH"
 ```
+
 ## Wiring
 
 Detailed Instructions here: [Adafruit](https://learn.adafruit.com/character-lcd-with-raspberry-pi-or-beaglebone-black/overview)
@@ -46,3 +49,6 @@ Detailed Instructions here: [Adafruit](https://learn.adafruit.com/character-lcd-
 
 To setup the Display run `install.sh`. This Installs all the dependencies.
 
+## Old Version
+
+The first version of this with an other datasource is linked [Adafruit](https://github.com/julianbruegger/corona-display/tree/V1)
