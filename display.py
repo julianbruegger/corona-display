@@ -6,7 +6,11 @@ import math
 import Adafruit_CharLCD as LCD
 
 url = "https://coronavirus-tracker-api.herokuapp.com/all"
-id = 85 # country ID
+id = 72 # country ID
+
+# Enter own numbers for your coubtry
+population_world = float("8000000000")
+population_country = float("8570000")
 
 # Raspberry Pi configuration:
 lcd_rs = 27  # Change this to pin 21 on older revision Raspberry Pi's
@@ -41,6 +45,10 @@ while True:
     confirmed_c = repr(parsed.get("confirmed").get("locations")[id].get("latest"))
     deaths_c = repr(parsed.get("deaths").get("locations")[id].get("latest"))
     recovered_c = repr(parsed.get("recovered").get("locations")[id].get("latest"))
+    float_w = float(confirmed_w)
+    float_c = float(confirmed_c)
+    percent_w = '{:.7f}'.format(float_w / population_world)
+    percent_c = '{:.7f}'.format(float_c / population_country)
 
 
     lcd.set_color(1.0, 0.54, 0.0)
@@ -64,4 +72,10 @@ while True:
 
     time.sleep(20.0)
 
+    lcd.set_color(0.2, 0.5, 0.4)
+    lcd.clear()
+    lcd.message('% of Swiss Population')
+    lcd.message('\n' + percent_w + '%')
+    
+    time.sleep(20.0)
 

@@ -8,7 +8,7 @@ import Adafruit_CharLCD as LCD
 url = "https://coronavirus-tracker-api.herokuapp.com/all"
 url_ov = "http://transport.opendata.ch/v1/stationboard?station=lucerne&limit=1"
 
-id = 85 # country ID
+id = 72 # country ID
 # Enter own numbers for your coubtry
 population_world = float("8000000000")
 population_country = float("8570000")
@@ -75,27 +75,24 @@ while True:
     message = category + number +' to ' + destination + '\nExp: ' + departure_time 
     lenght = len(message)
 
+    time.sleep(wait*2)
+
     lcd.set_color(0.1, 0.1, 0.1)
     lcd.clear()
     lcd.message(message)
+    print (lenght)
+    print (lenght-lcd_columns)
+    for i in range (4):
+        for i in range (lenght-lcd_columns):
+            time.sleep(wait)
+            lcd.move_left()
+        time.sleep(1)
 
-    for i in range (lenght):
-        time.sleep(wait)
-        lcd.move_left()
-
-    for i in range (lenght):
-        time.sleep(wait)
-        lcd.move_right()
-
-    for i in range (lenght):
-        time.sleep(wait)
-        lcd.move_left()
-
-    for i in range (lenght):
-        time.sleep(wait)
-        lcd.move_right()
+        for i in range (lenght-lcd_columns):
+            time.sleep(wait)
+            lcd.move_right()
          
-    time.sleep(20.0)
+    #time.sleep(20.0)
 
     lcd.set_color(1.0, 0.54, 0.0)
     lcd.clear()
