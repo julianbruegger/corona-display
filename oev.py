@@ -9,8 +9,8 @@ url = "https://coronavirus-tracker-api.herokuapp.com/all"
 url_ov = "http://transport.opendata.ch/v1/stationboard?station=lucerne&limit=1"
 
 id = 85 # country ID
-
-population_world = float("7769947783")
+# Enter own numbers for your coubtry
+population_world = float("8000000000")
 population_country = float("8570000")
 
 # Raspberry Pi configuration:
@@ -73,15 +73,25 @@ while True:
 
     wait = 0.9
     message = category + number +' to ' + destination + '\nExp: ' + departure_time 
+    lenght = len(message)
+
     lcd.set_color(0.1, 0.1, 0.1)
     lcd.clear()
     lcd.message(message)
 
-    for i in range (10):
+    for i in range (lenght):
         time.sleep(wait)
         lcd.move_left()
 
-    for i in range (10):
+    for i in range (lenght):
+        time.sleep(wait)
+        lcd.move_right()
+
+    for i in range (lenght):
+        time.sleep(wait)
+        lcd.move_left()
+
+    for i in range (lenght):
         time.sleep(wait)
         lcd.move_right()
          
