@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from bs4 import BeautifulSoup
 import Adafruit_CharLCD as LCD
 import requests
@@ -74,6 +76,13 @@ while True:
     lcd.set_color(0.2, 0.5, 0.4)
     lcd.clear()
     lcd.message('% of Swiss Population')
+    lcd.message('\n' + percent_c + '%')
+
+    time.sleep(20.0)
+
+    lcd.set_color(0.2, 0.5, 0.4)
+    lcd.clear()
+    lcd.message('% of World Population')
     lcd.message('\n' + percent_w + '%')
     
     time.sleep(20.0)
