@@ -31,10 +31,10 @@ percent_w = str('{:.7f}'.format(int(infections_w) / int(population_w))+(" %"))
 print("Cases in " +(last))
 print(("Infections: ") + infections_c + (", Deaths: ") + deaths_c+(", Survived: ")+survived_c)
 print("Numbers Worldwide")
-print(("Infections: ")+infections_w+(", Deaths: ")+ deaths_w +(", Survivied: ") +survived_w)
+print(("Infections: ")+infections_w+(", Deaths: ")+ deaths_w +(", Survived: ") +survived_w)
 
-print (percent_c + (" of ")+(last)+ (" citicens are infected!"))
-print (percent_w + (" of world citicens are infected!"))
+print (percent_c + (" of ")+(last)+ (" citizens are infected!"))
+print (percent_w + (" of world citizens are infected!"))
 print ()
 
 
