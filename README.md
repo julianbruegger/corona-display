@@ -47,8 +47,23 @@ Detailed Instructions here: [Adafruit](https://learn.adafruit.com/character-lcd-
 
 ## Setup
 
+### Material 
+
+You need the Folowing Material
+
+- Any kind of a [Raspberry-Pi](https://thepihut.com/collections/raspberry-pi) with GPIO-Pins.
+- I used this kind of [LCD-Display](https://thepihut.com/products/adafruit-rgb-backlight-positive-lcd-16x2-extras-black-on-rgb)
+- Jumper Cables, Male - Male, Male - Female, Female - Female [like This](https://thepihut.com/products/adafruit-premium-male-male-jumper-wires-20-x-6-150mm)
+- A Breadboard like [This](https://thepihut.com/products/raspberry-pi-breadboard-half-size)
+
+Moast of the things you allso can get on [Aliexpress](https://aliexpress.com)
+
+### Install
+
 Fetch current version of GitHub.
+
 ```sh
+
 cd ~
 git clone https://github.com/julianbruegger/corona-display.git
 
@@ -56,14 +71,20 @@ cd ~/corona-display
 ```
 
 To setup the Display run:
+
 ```sh
+
 sudo chmod +x install.sh
 sudo ./install.sh
+
 ```
+
 This Installs all the dependencies.
 
 To start the Program just run:
+
 ```sh
+
 python3 display.py
 ```
 
