@@ -40,14 +40,8 @@ print(("Infections: ") + infections_c + (", Deaths: ") + deaths_c+(", Survived: 
 print("Numbers Worldwide")
 print(("Infections: ")+infections_w+(", Deaths: ")+ deaths_w +(", Survived: ") +survived_w)
 
-<<<<<<< HEAD
 print (percent_c + (" of ")+(first)+ (" citicens are infected!"))
 print (percent_w + (" of world citicens are infected!"))
 #print ()
-=======
-print (percent_c + (" of ")+(last)+ (" citizens are infected!"))
-print (percent_w + (" of world citizens are infected!"))
-print ()
->>>>>>> b055c788972f0ba38dd50727d9e75908a0579037
 
 

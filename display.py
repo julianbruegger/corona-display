@@ -90,18 +90,7 @@ while True:
 
     lcd.set_color(0.2, 0.5, 0.4)
     lcd.clear()
-<<<<<<< HEAD
     lcd.message('% of 'first' Population')
-=======
-    lcd.message('% of Swiss Population')
-    lcd.message('\n' + percent_c + '%')
-
-    time.sleep(20.0)
-
-    lcd.set_color(0.2, 0.5, 0.4)
-    lcd.clear()
-    lcd.message('% of World Population')
->>>>>>> b055c788972f0ba38dd50727d9e75908a0579037
     lcd.message('\n' + percent_w + '%')
     
     time.sleep(Waiting)
