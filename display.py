@@ -1,8 +1,13 @@
+#!/usr/bin/python
+
 from bs4 import BeautifulSoup
 import Adafruit_CharLCD as LCD
 import requests
 import time
 import math
+import csv
+import sys
+
 
 # Insert your URL here
 url_c = "https://corona.help/country/switzerland"
@@ -11,6 +16,7 @@ population_c = "8570000"
 cc = "CH"
 population_w = "7770173166"
 url_w ="https://corona.help/"
+Waiting = '15.0'
 
 
 #Raspberry Pi configuration:
@@ -39,15 +45,22 @@ while True:
     soup_w = BeautifulSoup(page_w.text, 'html.parser')
 
     # print (soup)
-    infections_c = soup_c.select('h1')[1].text.strip()
-    deaths_c = soup_c.select('h1')[2].text.strip()
-    survived_c = soup_c.select('h1')[3].text.strip()
+    country = soup_c.select('h2')[0].text.strip()
+    infections_c = soup_c.select('h2')[1].text.strip()
+    deaths_c = soup_c.select('h2')[2].text.strip()
+    survived_c = soup_c.select('h2')[3].text.strip()
+    today_c = soup_c.select('h2')[4].text.strip()
 
-    infections_w = soup_w.select('h1')[1].text.strip()
-    deaths_w = soup_w.select('h1')[2].text.strip()
-    survived_w = soup_w.select('h1')[3].text.strip()
-    percent_c = '{:.7f}'.format(int(infections_c) / int(population_c))
-    percent_w = '{:.7f}'.format(int(infections_w) / int(population_w))
+    first, last = country.split()
+        
+    infections_w = soup_w.select('h2')[1].text.strip()
+    deaths_w = soup_w.select('h2')[2].text.strip()
+    survived_w = soup_w.select('h2')[3].text.strip()
+    today_w = soup_w.select('h2')[4].text.strip()
+
+    percent_c = str('{:.7f}'.format(int(infections_c.replace(',','')) / int(population_c))+(" %"))
+    percent_w = str('{:.7f}'.format(int(infections_w.replace(',','')) / int(populatio
+    
 
 
     lcd.set_color(1.0, 0.54, 0.0)
@@ -55,25 +68,32 @@ while True:
     lcd.message(cc + ' Cases ' + infections_c)
     lcd.message('\nWW Cases ' + infections_w)
 
-    time.sleep(20.0)
+    time.sleep(Waiting)
 
     lcd.set_color(0.0, 1.0, 0.0)
     lcd.clear()
     lcd.message(cc + ' Recoverd ' + survived_c)
     lcd.message('\nWW ' + survived_w)
 
-    time.sleep(20.0)
+    time.sleep(Waiting)
 
     lcd.set_color(1.0, 0.0, 0.0)
     lcd.clear()
     lcd.message(cc +' Dead ' + deaths_c)
     lcd.message('\nWW Dead ' + deaths_w)
 
-    time.sleep(20.0)
+    time.sleep(Waiting)
 
     lcd.set_color(0.2, 0.5, 0.4)
     lcd.clear()
-    lcd.message('% of Swiss Population')
+    lcd.message('% of 'first' Population')
     lcd.message('\n' + percent_w + '%')
     
-    time.sleep(20.0)
+    time.sleep(Waiting)
+
+    lcd.set_color(0.2, 0.5, 0.4)
+    lcd.clear()
+    lcd.message('Infected Today in' +cc)
+    lcd.message('\n' + today_c)
+    
+    time.sleep(Waiting)
