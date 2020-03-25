@@ -4,7 +4,6 @@ To keep a eye on the current Corona-Virus numbers I created this Programm wich d
 
 <img src="./data/IMG.jpg">
 
-
 ## Datasource
 
 For data I use [this Website](https://corona.help/).
@@ -90,4 +89,4 @@ python3 display.py
 
 ## Old Version
 
-The first version of this with an other datasource is linked [Adafruit](https://github.com/julianbruegger/corona-display/tree/V1)
+The first version of this with an other datasource is linked [V1](https://github.com/julianbruegger/corona-display/tree/V1)
