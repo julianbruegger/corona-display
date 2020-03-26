@@ -5,12 +5,6 @@ import sys
 import time
 from config import *
 
-# Insert your URL here
-url_c = "https://corona.help/country/switzerland"
-# Insert your Population here
-population_c = "8173166"
-population_w = "7770173166"
-url_w ="https://corona.help/"
 
 
 page_c = requests.get(url_c)
@@ -18,7 +12,7 @@ soup_c = BeautifulSoup(page_c.text, 'html.parser')
 page_w = requests.get(url_w)
 soup_w = BeautifulSoup(page_w.text, 'html.parser')
 
-#print (soup_c)
+#print (soup_c)ython
 
 country = soup_c.select('h2')[0].text.strip()
 infections_c = soup_c.select('h2')[1].text.strip()

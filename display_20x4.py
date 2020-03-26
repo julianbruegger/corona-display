@@ -9,18 +9,6 @@ import csv
 import sys
 
 
-# Insert your URL here
-url_c = "https://corona.help/country/switzerland"
-# Insert your Population here
-population_c = "8570000"
-cc = "CH"
-population_w = "7770173166"
-url_w ="https://corona.help/"
-Waiting = '15.0'
-
-
-
-
 
 while True:
     from module.corona import *
@@ -29,7 +17,7 @@ while True:
     lcd_string((first),LCD_LINE_1)
     lcd_string(("Infected ")+(infections_c)+(" +")+(today_c),LCD_LINE_2)
     lcd_string("Worldwide",LCD_LINE_3)
-    lcd_string(("Infected")+(infections_w)+(" +")+(today_w),LCD_LINE_4)
+    lcd_string(("Infected ")+(infections_w)+(" +")+(today_w),LCD_LINE_4)
     
     time.sleep(10)
     
