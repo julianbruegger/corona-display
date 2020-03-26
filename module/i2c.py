@@ -1,6 +1,9 @@
 import smbus
 import time
-from config import *
+
+# The width of your LCD-Display
+# Its Either 16 ore 20
+LCD_WIDTH = 20   # Maximum characters per line
 
 # Define some device parameters
 I2C_ADDR  = 0x27 # I2C device address

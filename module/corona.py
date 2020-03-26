@@ -3,8 +3,17 @@ import requests
 import csv
 import sys
 import time
-from config import *
 
+
+# Insert your country URL here
+url_c = "https://corona.help/country/switzerland"
+
+# Insert your country Population here
+population_c = "8173166"
+population_w = "7770173166"
+url_w ="https://corona.help/"
+# Your Country-Code
+cc = "CH"
 
 
 page_c = requests.get(url_c)
