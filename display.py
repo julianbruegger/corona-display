@@ -55,7 +55,7 @@ while True:
     survived_c = soup_c.select('h2')[3].text.strip()
     today_c = soup_c.select('h2')[4].text.strip()
 
-    first, last = country.split()
+    first = country.rsplit(' ',1)[0]
         
     infections_w = soup_w.select('h2')[1].text.strip()
     deaths_w = soup_w.select('h2')[2].text.strip()

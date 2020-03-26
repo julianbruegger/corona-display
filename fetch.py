@@ -24,8 +24,8 @@ deaths_c = soup_c.select('h2')[2].text.strip()
 survived_c = soup_c.select('h2')[3].text.strip()
 today_c = soup_c.select('h2')[4].text.strip()
 
-first, last = country.split()
-       
+first = country.rsplit(' ',1)[0]
+
 infections_w = soup_w.select('h2')[1].text.strip()
 deaths_w = soup_w.select('h2')[2].text.strip()
 survived_w = soup_w.select('h2')[3].text.strip()
@@ -43,5 +43,3 @@ print(("Infections: ")+infections_w+(", Deaths: ")+ deaths_w +(", Survived: ") +
 print (percent_c + (" of ")+(first)+ (" citicens are infected!"))
 print (percent_w + (" of world citicens are infected!"))
 #print ()
-
-
