@@ -3,6 +3,7 @@ import requests
 import csv
 import sys
 import time
+from config import *
 
 # Insert your URL here
 url_c = "https://corona.help/country/switzerland"

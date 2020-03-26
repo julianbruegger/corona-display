@@ -1,9 +1,9 @@
 import smbus
 import time
+from config import *
 
 # Define some device parameters
 I2C_ADDR  = 0x27 # I2C device address
-LCD_WIDTH = 20   # Maximum characters per line
 # Define some device constants
 LCD_CHR = 1 # Mode - Sending data
 LCD_CMD = 0 # Mode - Sending command
@@ -70,36 +70,3 @@ def lcd_string(message,line):
 
     for i in range(LCD_WIDTH):
         lcd_byte(ord(message[i]),LCD_CHR)
-
-    
-def main():
-    # Main program block
-
-    # Initialise display
-    lcd_init()
-
-    while True:
-
-        # Send some test
-        lcd_string("RPiSpy         <",LCD_LINE_1)
-        lcd_string("I2C LCD        <",LCD_LINE_2)
-        lcd_string("Julian           <",LCD_LINE_3)
-        lcd_string("Bruegger           <",LCD_LINE_4)
-        
-        time.sleep(10)
-        lcd_init()
-        
-        # Send some more text
-        lcd_string("Infections C",LCD_LINE_1)
-        lcd_string((infected_c),LCD_LINE_2)
-
-    time.sleep(3)
-
-if __name__ == '__main__':
-
-  try:
-    main()
-  except KeyboardInterrupt:
-    pass
-  finally:
-    lcd_byte(0x01, LCD_CMD)
