@@ -32,7 +32,12 @@ while True:
     lcd_string(("WW ")+(survived_w),LCD_LINE_2)
     
     time.sleep(10)
+    lcd_init()
+    time.sleep(1)
+    lcd_string("Created by",LCD_LINE_1)
+    lcd_string("JULIAN BRUEGGER",LCD_LINE_2)
     
+    time.sleep(5)
 
             
         
