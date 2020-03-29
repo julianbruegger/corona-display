@@ -37,6 +37,14 @@ while True:
     lcd_string("Recoverd Worldwide",LCD_LINE_3)
     lcd_string(survived_w,LCD_LINE_4)
     
+    time.sleep(5)
+    lcd_init()
+    time.sleep(1)
+    lcd_string("Corona-Ticker",LCD_LINE_1)
+    lcd_string("by",LCD_LINE_2)
+    lcd_string("Julian",LCD_LINE_3)
+    lcd_string("            Bruegger",LCD_LINE_4)
+    
     time.sleep(10)
     
 
