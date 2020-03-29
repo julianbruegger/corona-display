@@ -14,9 +14,15 @@ To extract the data I use BeautifulSoup.
 
 To print the numbers to the Terminal simply run the `fetch.py` file.
 
-To use it with an i2c Display you need to edit the `/module/config.py` file. 
+To use it with an i2c Display you need to edit the `/module/corna.py` file. 
+Change folowing Values:
+- url_c
+- population_c
+- cc
 
 Every line you ned to change is explained. 
+
+Allso 
 
 ## Wiring
 

@@ -2,7 +2,7 @@ import smbus
 import time
 
 # The width of your LCD-Display
-# Its Either 16 ore 20
+# Its Either 16 or 20
 LCD_WIDTH = 20   # Maximum characters per line
 
 # Define some device parameters

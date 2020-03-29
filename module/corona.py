@@ -10,7 +10,7 @@ url_c = "https://corona.help/country/switzerland"
 
 # Insert your country Population here
 population_c = "8173166"
-population_w = "7770173166"
+population_w = "7770173166" # World-population
 url_w ="https://corona.help/"
 # Your Country-Code
 cc = "CH"
