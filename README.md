@@ -22,7 +22,12 @@ Change folowing Values:
 
 Every line you ned to change is explained. 
  
+### Send me a Picture 
+If you made a Ticker by yourself feel free to create a issue with the Lable `Make` and send me some Pictures.
 
+[Link](https://github.com/julianbruegger/corona-display/issues/new?assignees=&labels=Make&template=i-made-one.md&title=I+made+one)
+
+[Mail](mailto:jul.bruegger@gmail.com)
 ## Wiring
 
 <img src="./data/i2c.png">
