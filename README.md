@@ -21,6 +21,7 @@ Change folowing Values:
 - cc
 
 Every line you ned to change is explained. 
+ 
 
 ## Wiring
 

@@ -1,11 +1,15 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+
+# Created By Julian Bruegger
+# 29.03.2020
+# Questions please contact jul.bruegger(at)gmail.com
+# To change country edit ./module/corona.py
 
 from bs4 import BeautifulSoup
 from module.i2c import *
 import requests
 import time
 import math
-import csv
 import sys
 
 
