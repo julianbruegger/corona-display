@@ -22,8 +22,6 @@ Change folowing Values:
 
 Every line you ned to change is explained. 
 
-Allso 
-
 ## Wiring
 
 <img src="./data/i2c.png">
