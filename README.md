@@ -7,6 +7,7 @@ To keep a eye on the current Corona-Virus numbers I created this Programm wich d
 Buy me a Coffee
 <a href="https://ko-fi.com/julianbruegger">
 <img stc="https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5cac59d00ca8b5409de931cd_support3.gif">
+</a>
 ## Datasource
 
 For data I use [this Website](https://corona.help/).
