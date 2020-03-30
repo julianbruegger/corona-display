@@ -25,7 +25,7 @@ while True:
     
     lcd_init()
     time.sleep(1)
-    lcd_string((cc), (deaths_c)+(" Deaths"),LCD_LINE_1)
+    lcd_string((cc) + (" ") + (deaths_c)+(" Deaths"),LCD_LINE_1)
     lcd_string(("WW ")+(deaths_w)+(" Deaths"),LCD_LINE_2)
     
     time.sleep(10)
