@@ -20,16 +20,16 @@ soup_w = BeautifulSoup(page_w.text, 'html.parser')
 
 country = soup_c.select('h2')[0].text.strip()
 infections_c = soup_c.select('h2')[1].text.strip()
-deaths_c = soup_c.select('h2')[2].text.strip()
-survived_c = soup_c.select('h2')[3].text.strip()
-today_c = soup_c.select('h2')[4].text.strip()
+deaths_c = soup_c.select('h2')[3].text.strip()
+survived_c = soup_c.select('h2')[5].text.strip()
+today_c = soup_c.select('h2')[2].text.strip()
 
 first, last = country.split()
        
 infections_w = soup_w.select('h2')[1].text.strip()
-deaths_w = soup_w.select('h2')[2].text.strip()
-survived_w = soup_w.select('h2')[3].text.strip()
-today_w = soup_w.select('h2')[4].text.strip()
+deaths_w = soup_w.select('h2')[3].text.strip()
+survived_w = soup_w.select('h2')[5].text.strip()
+today_w = soup_w.select('h2')[2].text.strip()
 
 percent_c = str('{:.7f}'.format(int(infections_c.replace(',','')) / int(population_c))+(" %"))
 percent_w = str('{:.7f}'.format(int(infections_w.replace(',','')) / int(population_w))+(" %"))
